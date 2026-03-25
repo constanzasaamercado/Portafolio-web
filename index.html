@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constanza Saa | Portafolio Fullstack</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Quicksand:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             /* Paleta Total Pastel */
@@ -15,7 +19,7 @@
             --bg-tarjeta: #ffffff;
             --texto-principal: #4b5563;
             --texto-suave: #6b7280;
-            
+
             /* Acentos Rosados y Lavandas */
             --rosa-acento: #f472b6;
             --rosa-hover: #db2777;
@@ -40,7 +44,10 @@
             padding: 40px 20px;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Quicksand', sans-serif;
             color: var(--texto-principal);
         }
@@ -58,11 +65,11 @@
             width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 15px var(--sombra-navbar);
-            box-sizing: border-box; 
+            box-sizing: border-box;
         }
 
         .logo-ar {
-            color: var(--rosa-acento); 
+            color: var(--rosa-acento);
             font-family: 'Quicksand', sans-serif;
             font-size: 1.7rem;
             font-weight: bold;
@@ -76,13 +83,15 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--texto-navbar); 
+            color: var(--texto-navbar);
             font-size: 0.95rem;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .nav-links a:hover { color: var(--rosa-acento); }
+        .nav-links a:hover {
+            color: var(--rosa-acento);
+        }
 
         /* --- HERO --- */
         #hero {
@@ -90,7 +99,11 @@
             padding: 180px 20px 100px 20px;
         }
 
-        #hero h1 { font-size: 3.5rem; margin-bottom: 5px; margin-top: 0; }
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
 
         .destaque-rosa {
             background: linear-gradient(90deg, #f472b6 0%, #c084fc 100%);
@@ -98,7 +111,12 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .subtitulo { font-size: 1.4rem; color: var(--rosa-hover); font-weight: 500; margin-bottom: 20px; }
+        .subtitulo {
+            font-size: 1.4rem;
+            color: var(--rosa-hover);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
 
         .btn-principal {
             display: inline-block;
@@ -113,16 +131,42 @@
             margin-top: 25px;
         }
 
-        .btn-principal:hover { transform: translateY(-3px); background-color: var(--rosa-hover); }
+        .btn-principal:hover {
+            transform: translateY(-3px);
+            background-color: var(--rosa-hover);
+        }
 
         /* --- TÍTULOS --- */
-        .titulo-seccion { font-size: 2.2rem; text-align: center; margin: 80px 0 50px 0; position: relative; }
-        .titulo-seccion::after { content: ''; display: block; width: 60px; height: 4px; background: var(--rosa-suave); margin: 15px auto 0; border-radius: 2px; }
+        .titulo-seccion {
+            font-size: 2.2rem;
+            text-align: center;
+            margin: 80px 0 50px 0;
+            position: relative;
+        }
+
+        .titulo-seccion::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--rosa-suave);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
 
         /* --- GRILLAS --- */
-        .grilla { display: grid; gap: 30px; }
-        .grilla-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-        .grilla-2 { grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
+        .grilla {
+            display: grid;
+            gap: 30px;
+        }
+
+        .grilla-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grilla-2 {
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        }
 
         .tarjeta {
             background-color: var(--bg-tarjeta);
@@ -133,15 +177,49 @@
             transition: all 0.3s ease;
         }
 
-        .tarjeta:hover { transform: translateY(-8px); border-color: var(--rosa-suave); box-shadow: 0 15px 40px var(--sombra-fuerte); }
-        .tarjeta h3 { color: var(--rosa-hover); margin-top: 0; font-size: 1.4rem; }
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            border-color: var(--rosa-suave);
+            box-shadow: 0 15px 40px var(--sombra-fuerte);
+        }
+
+        .tarjeta h3 {
+            color: var(--rosa-hover);
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
 
         /* --- TAGS --- */
-        .tags { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
-        .tag { background-color: var(--lavanda); color: #7c3aed; padding: 6px 14px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; }
-        .tag-tech { background-color: #fce7f3; color: #db2777; }
-        .tag-data { background-color: #e0f2fe; color: #0284c7; }
-        .tag-soft { background-color: #fef3c7; color: #d97706; }
+        .tags {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: var(--lavanda);
+            color: #7c3aed;
+            padding: 6px 14px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tag-tech {
+            background-color: #fce7f3;
+            color: #db2777;
+        }
+
+        .tag-data {
+            background-color: #e0f2fe;
+            color: #0284c7;
+        }
+
+        .tag-soft {
+            background-color: #fef3c7;
+            color: #d97706;
+        }
 
         /* --- LÍNEA DE TIEMPO (Cursos) --- */
         .item-curso {
@@ -162,19 +240,46 @@
             border-radius: 50%;
         }
 
-        .fecha { font-size: 0.9rem; color: var(--rosa-acento); font-weight: 700; margin-bottom: 5px; }
+        .fecha {
+            font-size: 0.9rem;
+            color: var(--rosa-acento);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
 
         /* --- FOOTER --- */
-        footer { text-align: center; padding: 80px 20px; margin-top: 80px; border-top: 1px solid var(--rosa-suave); color: var(--texto-suave); background-color: #fff1f5; }
-        .enlaces-footer a { color: var(--rosa-acento); text-decoration: none; font-weight: 600; margin: 0 10px; transition: color 0.3s ease; }
-        .enlaces-footer a:hover { color: var(--rosa-hover); text-decoration: underline; }
-        section[id] { scroll-margin-top: 100px; }
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            margin-top: 80px;
+            border-top: 1px solid var(--rosa-suave);
+            color: var(--texto-suave);
+            background-color: #fff1f5;
+        }
+
+        .enlaces-footer a {
+            color: var(--rosa-acento);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .enlaces-footer a:hover {
+            color: var(--rosa-hover);
+            text-decoration: underline;
+        }
+
+        section[id] {
+            scroll-margin-top: 100px;
+        }
     </style>
 </head>
+
 <body>
 
     <header class="navbar">
-         <div>
+        <div>
             <a href="#hero">
                 <img src="icon.svg" alt="Icono de Constanza Saa" class="img-fluid" style="height: 40px" />
             </a>
@@ -188,12 +293,14 @@
     </header>
 
     <div class="contenedor">
-        
+
         <section id="hero">
             <h1>Hola, soy <span class="destaque-rosa">Constanza Saa</span></h1>
             <div class="subtitulo">Ingeniera en Administración & Fullstack Python Developer</div>
             <p style="font-size: 1.15rem; max-width: 700px; margin: 0 auto; color: var(--texto-suave);">
-                Especialista en optimización de procesos mediante SAP, Power BI y automatización con Python para la gestión eficiente de grandes volúmenes de datos. Combino mi visión de negocio con habilidades técnicas para crear soluciones de software que realmente aporten valor.
+                Especialista en optimización de procesos mediante SAP, Power BI y automatización con Python para la
+                gestión eficiente de grandes volúmenes de datos. Combino mi visión de negocio con habilidades técnicas
+                para crear soluciones de software que realmente aporten valor.
             </p>
             <a href="mailto:constanza.saa.mercado@gmail.com" class="btn-principal">Contáctame</a>
         </section>
@@ -234,17 +341,20 @@
             <div class="grilla grilla-2">
                 <div class="tarjeta">
                     <h3 style="margin-bottom: 25px; color: var(--texto-principal);">Tecnología y Datos</h3>
-                    
+
                     <div class="item-curso">
                         <div class="fecha">En curso</div>
-                        <strong style="color: var(--rosa-hover);">Desarrollo de Aplicaciones Fullstack Python Trainee</strong> 
+                        <strong style="color: var(--rosa-hover);">Desarrollo de Aplicaciones Fullstack Python
+                            Trainee</strong>
                         <p style="margin: 5px 0 0 0; font-size: 0.95rem;">Formación intensiva en desarrollo web.</p>
                     </div>
 
                     <div class="item-curso">
                         <div class="fecha">2026</div>
-                        <strong style="color: var(--rosa-hover);">Automatización con Python para Excel</strong> [cite: 52]
-                        <p style="margin: 5px 0 0 0; font-size: 0.95rem;">Procesamiento de datos e IA impartido por Temuco Lab.</p> 
+                        <strong style="color: var(--rosa-hover);">Automatización con Python para Excel</strong> [cite:
+                        52]
+                        <p style="margin: 5px 0 0 0; font-size: 0.95rem;">Procesamiento de datos e IA impartido por
+                            Temuco Lab.</p>
                     </div>
 
                     <div class="item-curso" style="border-left-color: transparent; margin-bottom: 0;">
@@ -261,9 +371,9 @@
                         <div class="fecha">2024 - 2025</div>
                         <strong style="color: var(--rosa-hover);">Certificaciones Técnicas y Culturales</strong>
                         <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
-                            • Nivel Básico de Mapuzugun (CONADI, 2025).<br> 
-                            • Introducción al Estatuto Administrativo y Ley 19.378 (CEAE, 2025).<br> 
-                            • Instaladora Eléctrica Clase D (Licencia SEC por INACAP, 2024). 
+                            • Nivel Básico de Mapuzugun (CONADI, 2025).<br>
+                            • Introducción al Estatuto Administrativo y Ley 19.378 (CEAE, 2025).<br>
+                            • Instaladora Eléctrica Clase D (Licencia SEC por INACAP, 2024).
                         </p>
                     </div>
                 </div>
@@ -271,11 +381,16 @@
         </section>
 
         <section id="proyectos">
-            <h2 class="titulo-seccion">Proyectos Tech Destacados</h2>
+            <h2 class="titulo-seccion">
+                <img src="github.svg" alt="GitHub"
+                    style="height: 30px; width: 30px; vertical-align: middle; margin-right: 10px;">
+                Proyectos Tech
+            </h2>
             <div class="grilla grilla-2">
                 <div class="tarjeta">
                     <h3>Alke Wallet</h3>
-                    <p>Desarrollo de una aplicación de billetera digital orientada a la gestión personal de finanzas y transacciones.</p>
+                    <p>Desarrollo de una aplicación de billetera digital orientada a la gestión personal de finanzas y
+                        transacciones.</p>
                     <div class="tags">
                         <span class="tag tag-tech">Python</span>
                         <span class="tag tag-tech">Django</span>
@@ -296,18 +411,27 @@
 
         <footer id="contacto">
             <h2 style="color: var(--rosa-hover); margin-top: 0;">¿Hablamos?</h2>
-            <p style="margin-bottom: 30px; color: var(--texto-suave);">Estoy abierta a nuevas oportunidades donde pueda aportar mi perfil híbrido de gestión e ingeniería de software.</p>
+            <p style="margin-bottom: 30px; color: var(--texto-suave);">Estoy abierta a nuevas oportunidades donde pueda
+                aportar mi perfil híbrido de gestión e ingeniería de software.</p>
             <div class="enlaces-footer">
-                <a href="https://www.linkedin.com/in/constanza-saa-mercado-a0285516b" target="_blank">LinkedIn</a> | 
-                <a href="mailto:constanza.saa.mercado@gmail.com">Email</a> |
-                <a href="#">GitHub</a>
+                <a href="https://www.linkedin.com/in/constanza-saa-mercado-a0285516b" target="_blank">
+                    <i class="fa-brands fa-linkedin" style="font-size: 28px;"></i>
+                </a>
+                <a href="mailto:constanza.saa.mercado@gmail.com">
+                    <i class="fa-solid fa-envelope" style="font-size: 28px;"></i>
+                </a>
+                <a href="https://github.com/constanzasaamercado" target="_blank">
+                    <i class="fa-brands fa-github" style="font-size: 28px;"></i>
+                </a>
             </div>
-            <p style="margin-top: 40px; font-size: 0.85rem; color: #a1a1a1;">
-                Constanza Saa Mercado · Temuco, Región de la Araucanía · 2026
-            </p>
-        </footer>
+    </div>
+    <p style="margin-top: 40px; font-size: 0.85rem; color: #a1a1a1;">
+        Constanza Saa Mercado · Temuco, Región de la Araucanía · 2026
+    </p>
+    </footer>
 
     </div>
 
 </body>
+
 </html>
